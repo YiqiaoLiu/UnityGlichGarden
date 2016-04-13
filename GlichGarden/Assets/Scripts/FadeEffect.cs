@@ -36,7 +36,9 @@ public class FadeEffect : MonoBehaviour {
 			float alphaChange = Time.deltaTime / fadeInTime;
 			currentColor.a -= alphaChange;
 			fadePanel.color = currentColor;
-		} 
+		} else if (!isSplash) {
+			gameObject.SetActive(false);
+		}
 		if (Time.timeSinceLevelLoad > fadeOutTime && Time.timeSinceLevelLoad < fadeEndTime && isSplash) {
 			float alphaChange = Time.deltaTime / fadeInTime;
 			currentColor.a += alphaChange;
