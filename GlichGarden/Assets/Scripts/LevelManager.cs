@@ -6,7 +6,9 @@ public class LevelManager : MonoBehaviour {
 	public float autoLoadNextLevel;
 
 	void Start() {
-		Invoke ("LoadNextLevel", autoLoadNextLevel);
+		if (autoLoadNextLevel != 0) {
+			Invoke ("LoadNextLevel", autoLoadNextLevel);
+		}
 	}
 
 	public void LoadLevel(string name) {
