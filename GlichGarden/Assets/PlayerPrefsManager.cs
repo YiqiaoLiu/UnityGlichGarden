@@ -5,6 +5,7 @@ public class PlayerPrefsManager : MonoBehaviour {
 
 	const string MASTER_VOLUME_KEY = "master_volume";
 	const string LEVEL_UNLOCKED_KEY = "level_unlocked_";
+	const string DIFF_KEY = "difficulty";
 
 	//Set and get the master volume by playerprefs
 	public static void SetMasterVolume(float MasterVolume){
@@ -40,5 +41,21 @@ public class PlayerPrefsManager : MonoBehaviour {
 			return false;
 		}
 	}
+
+
+	//Set the difficulty of the game
+	public static void SetDifficulty(float volume){
+		if (volume >= 1f && volume <= 3f) {
+			PlayerPrefs.SetFloat(DIFF_KEY, volume);
+		} else {
+			Debug.LogError("The difficulty level is out of range!");
+		}
+	}
+
+	//Get the difficulty of the game
+	public static float GetDifficulty() {
+		return PlayerPrefs.GetFloat (DIFF_KEY);
+	}
+
 
 }
