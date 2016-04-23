@@ -1334,7 +1334,7 @@ GameObject:
   - 114: {fileID: 1825638457}
   - 114: {fileID: 1825638456}
   m_Layer: 5
-  m_Name: StartButton
+  m_Name: DefalultButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1454,7 +1454,7 @@ GameObject:
   - 114: {fileID: 1907230298}
   - 114: {fileID: 1907230297}
   m_Layer: 5
-  m_Name: QuitButton
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
