@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 428082}
   - 95: {fileID: 9528082}
+  - 61: {fileID: 6113968}
   m_Layer: 0
   m_Name: Star trophy
   m_TagString: Untagged
@@ -25,6 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 428084}
   - 212: {fileID: 21228082}
+  - 61: {fileID: 6134592}
   m_Layer: 0
   m_Name: Star
   m_TagString: Untagged
@@ -71,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 3, z: 0}
+  m_LocalPosition: {x: 1, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 428088}
@@ -97,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.103, z: 0}
+  m_LocalPosition: {x: 0, y: -.261000007, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 428084}
@@ -110,11 +112,33 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.203999996, z: 0}
+  m_LocalPosition: {x: 0, y: -.374000013, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 428082}
   m_RootOrder: 0
+--- !u!61 &6113968
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128082}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .400000006, y: .709999979}
+  m_Center: {x: 0, y: 0}
+--- !u!61 &6134592
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128084}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: .959999979}
+  m_Center: {x: 0, y: -1.90734863e-06}
 --- !u!95 &9528082
 Animator:
   serializedVersion: 3
