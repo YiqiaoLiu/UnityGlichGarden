@@ -9,9 +9,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 467284}
   - 95: {fileID: 9567286}
-  - 114: {fileID: 11487892}
   - 50: {fileID: 5072852}
   - 61: {fileID: 6100098}
+  - 114: {fileID: 11405588}
+  - 114: {fileID: 11405590}
+  - 114: {fileID: 11487174}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -42,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 4, z: 0}
+  m_LocalPosition: {x: 6.0999999, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467286}
@@ -101,7 +103,7 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11487892
+--- !u!114 &11405588
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -109,10 +111,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 167284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be0c864859d84d54e91929d67a6a1b8d, type: 3}
+  m_Script: {fileID: 11500000, guid: 00433109f6293be4ca1dbf553b73a40b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSpeed: .5
+--- !u!114 &11405590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d5679842d52924cb3cd58f44f245ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11487174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622d76b3a6f6398479f692228f0ad6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthy: 100
 --- !u!212 &21267286
 SpriteRenderer:
   m_ObjectHideFlags: 1
