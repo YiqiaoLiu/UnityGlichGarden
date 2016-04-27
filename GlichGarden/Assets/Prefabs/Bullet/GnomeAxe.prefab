@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 442718}
+  - 212: {fileID: 21202542}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -23,9 +24,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 442720}
-  - 212: {fileID: 21242718}
   - 50: {fileID: 5042718}
   - 61: {fileID: 6142718}
+  - 114: {fileID: 11402542}
+  - 95: {fileID: 9502542}
   m_Layer: 0
   m_Name: GnomeAxe
   m_TagString: Untagged
@@ -84,12 +86,39 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .479999989, y: .439999998}
   m_Center: {x: 2.38418579e-07, y: 0}
---- !u!212 &21242718
-SpriteRenderer:
+--- !u!95 &9502542
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142720}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a164cf5e3c4d4c44a959c68d5b611203, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11402542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c83774cb8000e2840aff696be1229389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDamage: 0
+--- !u!212 &21202542
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142718}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
