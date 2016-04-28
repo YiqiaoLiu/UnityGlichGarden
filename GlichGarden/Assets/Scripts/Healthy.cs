@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Healthy : MonoBehaviour {
 
-	public float healthy = 100f;				//Define the object's HP
+	public float healthy;				//Define the object's HP
 
 	//To deal with the damage from other
 	public void GetDamage(float damage){
