@@ -5,6 +5,7 @@ public class Shooter : MonoBehaviour {
 
 	public GameObject Bullet;			//Define the object of the bullet
 	public GameObject BulletPos;		//This object is in order to define the initial position of the bullet
+	public GameObject BulletParent;		//This object is in order to store the instantiated bullet when game runs
 
 	/*This is the way of using script to control the fire rate
 	 * 
@@ -22,7 +23,16 @@ public class Shooter : MonoBehaviour {
 	}
 	*/
 
+	void Start() {
+		//Check whether the Bullet GameObject existed, if not, created a new one
+		BulletParent = GameObject.Find("Bullet");
+		if (BulletParent == null) {
+			BulletParent = new GameObject("Bullet");
+		}
+	}
+
 	public void Fire(){
 		GameObject newBullet = Instantiate (Bullet, BulletPos.transform.position, Quaternion.identity) as GameObject;	//Instantiate a bullet at the define pos
+		newBullet.transform.parent = BulletParent.transform;															//Locate the bullet into the Bullet GameObject
 	}
 }
