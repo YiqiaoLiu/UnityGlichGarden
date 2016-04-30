@@ -34,7 +34,7 @@ public class AttackerSpawner : MonoBehaviour {
 		float spawnRate = thisAttacer.spawnRate;													//Get the spawnRate of the specific attacker
 		float spawnPerSecond = 1 / spawnRate;														//Calculate how many of this type of accakcer will be instantiated per second
 
-		float temp = spawnPerSecond * Time.deltaTime / 5;
+		float temp = spawnPerSecond * Time.deltaTime / 10;
 		float check = Random.value;
 		if (check < temp) {
 			return true;

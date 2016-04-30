@@ -162,7 +162,6 @@ MonoBehaviour:
   attackerPrefabArray:
   - {fileID: 136978, guid: 2a9a573cba8895148be95b6e7bfb735a, type: 2}
   - {fileID: 167284, guid: 925b379148b65c64ba732b228332994e, type: 2}
-  spawnRate: 3
 --- !u!1001 &100171421
 Prefab:
   m_ObjectHideFlags: 0
@@ -357,7 +356,6 @@ MonoBehaviour:
   attackerPrefabArray:
   - {fileID: 167284, guid: 925b379148b65c64ba732b228332994e, type: 2}
   - {fileID: 136978, guid: 2a9a573cba8895148be95b6e7bfb735a, type: 2}
-  spawnRate: 3
 --- !u!1 &430883328
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,7 +824,6 @@ MonoBehaviour:
   attackerPrefabArray:
   - {fileID: 136978, guid: 2a9a573cba8895148be95b6e7bfb735a, type: 2}
   - {fileID: 167284, guid: 925b379148b65c64ba732b228332994e, type: 2}
-  spawnRate: 3
 --- !u!1 &867345664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,7 +1645,6 @@ MonoBehaviour:
   attackerPrefabArray:
   - {fileID: 167284, guid: 925b379148b65c64ba732b228332994e, type: 2}
   - {fileID: 136978, guid: 2a9a573cba8895148be95b6e7bfb735a, type: 2}
-  spawnRate: 3
 --- !u!1 &1923359069
 GameObject:
   m_ObjectHideFlags: 0
@@ -1896,4 +1892,3 @@ MonoBehaviour:
   attackerPrefabArray:
   - {fileID: 167284, guid: 925b379148b65c64ba732b228332994e, type: 2}
   - {fileID: 136978, guid: 2a9a573cba8895148be95b6e7bfb735a, type: 2}
-  spawnRate: 3

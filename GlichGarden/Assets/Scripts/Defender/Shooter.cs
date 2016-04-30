@@ -7,6 +7,8 @@ public class Shooter : MonoBehaviour {
 	public GameObject BulletPos;		//This object is in order to define the initial position of the bullet
 	public GameObject BulletParent;		//This object is in order to store the instantiated bullet when game runs
 
+	private Animator anim;				//Define the Animator variable of the defender
+
 	/*This is the way of using script to control the fire rate
 	 * 
 	public float fireRate;				//Define the fireRate
@@ -28,6 +30,30 @@ public class Shooter : MonoBehaviour {
 		BulletParent = GameObject.Find("Bullet");
 		if (BulletParent == null) {
 			BulletParent = new GameObject("Bullet");
+		}
+		anim = GetComponent<Animator> ();																				//Get the Animator attribute of the defender
+	}
+
+	void Update(){
+		//According to the detect result, set the attacking bool variable
+		if (detectAttacker ()) {
+			anim.SetBool ("isAttacking", true);
+		} else {
+			anim.SetBool ("isAttacking", false);
+		}
+	}
+
+	//Detect attacker function
+	bool detectAttacker(){
+		float lineIndex = transform.position.y;																			//Using the y position to determine the line index
+		GameObject thisLine = GameObject.Find ("SpawnLine" + lineIndex.ToString ());									//According to the line index find the spawnline object
+		int attackerNumber = thisLine.transform.childCount;																//Using the childCount to count the child object(attacker number)
+
+		//If the number lager than 0 means detect attacker
+		if (attackerNumber > 0) {
+			return true;
+		} else {
+			return false;
 		}
 	}
 
