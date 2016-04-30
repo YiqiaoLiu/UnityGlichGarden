@@ -6,6 +6,7 @@ public class AttackerController : MonoBehaviour {
 	private float currentWalkingSpeed;													//Define the attacker's walk speed;
 	private GameObject currentAttackTarget;												//Define the attacker's current target
 	private Animator anim;																//Define the attacker's Animator
+	public float spawnRate;																//Define the attacker spawn rate
 
 	// Use this for initialization
 	void Start () {
