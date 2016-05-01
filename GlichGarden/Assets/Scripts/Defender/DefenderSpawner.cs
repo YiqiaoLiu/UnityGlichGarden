@@ -2,8 +2,10 @@
 using System.Collections;
 
 public class DefenderSpawner : MonoBehaviour {
+		
 
 	public GameObject defenderParent;						//Store all instantiate defender inside this GameObject
+	private ShowStarNumber star;							//Define the ShowStarNumber variable to check the number of star and the cost of the defender
 
 	// Use this for initialization
 	void Start () {
@@ -12,6 +14,8 @@ public class DefenderSpawner : MonoBehaviour {
 		if (defenderParent == null) {
 			defenderParent = new GameObject("Defenders");
 		}
+
+		star = GameObject.FindObjectOfType<ShowStarNumber> ();		//Get the ShowStarNumber
 	}
 	
 	// Update is called once per frame
@@ -21,9 +25,24 @@ public class DefenderSpawner : MonoBehaviour {
 
 	//The click event
 	void OnMouseDown() {
-		GameObject defender = ButtonController.selectedDefender;												//Define the type of defender need to be instantiated 
-		GameObject newDefender = Instantiate (defender, spawnPosition (), Quaternion.identity) as GameObject;	//Instantiate the defender
-		newDefender.transform.parent = defenderParent.transform;												//Store the defender inside the parent GameObject
+		GameObject defender = ButtonController.selectedDefender;													//Define the type of defender need to be instantiated 
+
+		//Check whether the defender is selected, if not, just return
+		if (defender == null) {
+			return;
+		}
+
+		int thisDefenderCost = defender.GetComponent<DefenderController> ().defenderCost;							//Calculate the selected defender's cost
+
+		//Check the current star number is larger than the cost
+		//If yes, spawn the defender, if not, reject the spawn request
+		if (star.costStarNumber (thisDefenderCost) == ShowStarNumber.Status.SCCUESS) {
+			GameObject newDefender = Instantiate (defender, spawnPosition (), Quaternion.identity) as GameObject;	//Instantiate the defender
+			newDefender.transform.parent = defenderParent.transform;												//Store the defender inside the parent GameObject
+		} else {
+			Debug.Log("Insufficient stars");
+			return;
+		}
 	}
 
 	//Calculate the position the user click to instantiate the defender
